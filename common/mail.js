@@ -1,9 +1,9 @@
 var mailer        = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
+var mgTransport = require('nodemailer-mailgun-transport');
 var config        = require('../config');
 var util          = require('util');
 var logger = require('./logger');
-var transporter     = mailer.createTransport(smtpTransport(config.mail_opts));
+var transporter     = mailer.createTransport(mgTransport(config.mail_opts));
 var SITE_ROOT_URL = 'http://' + config.host;
 
 /**
