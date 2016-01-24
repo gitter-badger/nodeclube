@@ -9,6 +9,7 @@ all: test
 
 install:
 	@npm install $(NPM_REGISTRY)
+    @./node_modules/bower/bin/bower install
 
 pretest:
 	@if ! test -f config.js; then \
